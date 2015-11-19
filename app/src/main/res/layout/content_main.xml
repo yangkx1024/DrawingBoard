@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <net.siren93.drawingboard.DrawingBoard
+        android:id="@+id/mDrawingBoard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </net.siren93.drawingboard.DrawingBoard>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_ad_paint"
+            style="@style/TabButton"
+            android:text="加粗画笔"
+            android:onClick="adPaint"/>
+        <Button
+            android:id="@+id/bt_dv_change"
+            style="@style/TabButton"
+            android:text="开启橡皮"
+            android:onClick="changePaint"/>
+        <Button
+            android:id="@+id/bt_ad_eraser"
+            style="@style/TabButton"
+            android:text="加粗橡皮"
+            android:onClick="adEraser"/>
+        <Button
+            android:id="@+id/bt_reset"
+            style="@style/TabButton"
+            android:text="重置设置"
+            android:onClick="reset"/>
+        <Button
+            android:id="@+id/bt_clear"
+            style="@style/TabButton"
+            android:text="清空画板"
+            android:onClick="clear"/>
+        <Button
+            style="@style/TabButton"
+            android:text="undo"
+            android:onClick="undo" />
+        <Button
+            style="@style/TabButton"
+            android:text="redo"
+            android:onClick="redo" />
+        <Button
+            style="@style/TabButton"
+            android:text="显示图片"
+            android:onClick="showImg" />
+        <Button
+            style="@style/TabButton"
+            android:text="播放动画"
+            android:onClick="play" />
+    </LinearLayout>
+</LinearLayout>
